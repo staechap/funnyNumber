@@ -20,7 +20,9 @@ class ViewController: UIViewController {
     
     @IBAction func decButtom(_ sender: Any) {
         print("Click DEC")
-
+        let ungClass = MyClass()
+        numberAInt = ungClass.decNumber(intNumber: numberAInt)
+        numberLabel.text = String(numberAInt)
     }
     
     @IBAction func incButtom(_ sender: Any) {
@@ -31,17 +33,23 @@ class ViewController: UIViewController {
     }
     
     
+    
+    @IBAction func resetInt(_ sender: Any) {
+        print("Current Value ==> \(numberAInt)")
+        numberAInt = oneNumber();       numberLabel.text = String(describing: numberAInt)
+    }
+    
+    func oneNumber() -> Int{
+        numberAInt = 1
+        return numberAInt
+    }
+    
     // Function Add Number
     
     func addNumber(intNumber: Int) -> Int {
         let result = intNumber + 1
         return result
     }
-    
-    
-    
-    
-    
     
 
     override func viewDidLoad() {

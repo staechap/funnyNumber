@@ -50,7 +50,11 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Lwe-RU-5RJ"/>
                                     <barButtonItem title="Item" systemItem="search" id="zSl-rU-lQW"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="P9d-Fd-BDo"/>
-                                    <barButtonItem title="Item" systemItem="refresh" id="tCV-Tm-FTa"/>
+                                    <barButtonItem title="Item" systemItem="refresh" id="tCV-Tm-FTa">
+                                        <connections>
+                                            <action selector="resetInt:" destination="BYZ-38-t0r" id="SNm-Za-hR6"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Ymb-WN-Czw"/>
                                     <barButtonItem image="ic_archive_2x.png" id="3OH-Lh-Mcn">
                                         <color key="tintColor" red="1" green="0.19615320911948675" blue="0.24969930808987362" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
