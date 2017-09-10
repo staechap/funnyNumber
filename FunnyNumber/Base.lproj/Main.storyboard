@@ -11,9 +11,25 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="3FP-K7-jWd">
+            <objects>
+                <viewController id="c4N-Cb-HB5" sceneMemberID="viewController">
+                    <label key="view" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bek-AX-BCQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6MD-9d-L6b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-777" y="43"/>
+        </scene>
+        <!--HomeController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FunnyNumber" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="HomeController" id="BYZ-38-t0r" customClass="ViewController" customModule="FunnyNumber" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -58,6 +74,9 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Ymb-WN-Czw"/>
                                     <barButtonItem image="ic_archive_2x.png" id="3OH-Lh-Mcn">
                                         <color key="tintColor" red="1" green="0.19615320911948675" blue="0.24969930808987362" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="Red-JZ-yM9" kind="show" id="hcD-VG-t6T"/>
+                                        </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
@@ -90,6 +109,62 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="93.599999999999994" y="42.728635682158924"/>
+        </scene>
+        <!--TimerViewController-->
+        <scene sceneID="o0A-CW-8qm">
+            <objects>
+                <viewController title="TimerViewController" id="Red-JZ-yM9" customClass="TimerViewController" customModule="FunnyNumber" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QY6-3D-HbU"/>
+                        <viewControllerLayoutGuide type="bottom" id="8oJ-tK-yG0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jl6-hQ-5U7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nS2-VU-mPS">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Timer" id="1Ca-N2-Vbm">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="reply" id="20P-3b-MWg">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="lBu-tm-i0N"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="nqc-Of-ShX"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IHn-dq-86d">
+                                <rect key="frame" x="16" y="244" width="343" height="179.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="150"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZYO-9i-osy">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="FnI-i4-15T"/>
+                                    <barButtonItem title="Item" systemItem="stop" id="0Wc-mJ-lBl"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IHn-dq-86d" firstAttribute="leading" secondItem="Jl6-hQ-5U7" secondAttribute="leadingMargin" id="1CU-zN-Xc2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IHn-dq-86d" secondAttribute="trailing" id="F9Y-Wi-zfD"/>
+                            <constraint firstItem="IHn-dq-86d" firstAttribute="centerX" secondItem="Jl6-hQ-5U7" secondAttribute="centerX" id="FMG-K5-Z84"/>
+                            <constraint firstAttribute="trailing" secondItem="ZYO-9i-osy" secondAttribute="trailing" id="MsG-7f-F4q"/>
+                            <constraint firstItem="ZYO-9i-osy" firstAttribute="leading" secondItem="Jl6-hQ-5U7" secondAttribute="leading" id="UtR-Hk-kmR"/>
+                            <constraint firstItem="IHn-dq-86d" firstAttribute="centerY" secondItem="Jl6-hQ-5U7" secondAttribute="centerY" id="m1D-T4-Mr9"/>
+                            <constraint firstItem="8oJ-tK-yG0" firstAttribute="top" secondItem="ZYO-9i-osy" secondAttribute="bottom" id="yr8-zu-Hh8"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C2c-en-aFI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="797.60000000000002" y="42.728635682158924"/>
         </scene>
     </scenes>
     <resources>
