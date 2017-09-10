@@ -18,6 +18,8 @@
 		8F0EBF951F64E293000BEEBC /* alexander-mils-instagram-com-alexandermils-319981.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F0EBF941F64E293000BEEBC /* alexander-mils-instagram-com-alexandermils-319981.jpg */; };
 		8F0EBF971F64FAB5000BEEBC /* Myclass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0EBF961F64FAB5000BEEBC /* Myclass.swift */; };
 		8F0EBF991F651034000BEEBC /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0EBF981F651034000BEEBC /* TimerViewController.swift */; };
+		8F0EBF9D1F652383000BEEBC /* CountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0EBF9C1F652383000BEEBC /* CountViewController.swift */; };
+		8F0EBF9F1F6529AB000BEEBC /* MyConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0EBF9E1F6529AB000BEEBC /* MyConstant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		8F0EBF941F64E293000BEEBC /* alexander-mils-instagram-com-alexandermils-319981.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "alexander-mils-instagram-com-alexandermils-319981.jpg"; sourceTree = "<group>"; };
 		8F0EBF961F64FAB5000BEEBC /* Myclass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Myclass.swift; sourceTree = "<group>"; };
 		8F0EBF981F651034000BEEBC /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		8F0EBF9C1F652383000BEEBC /* CountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountViewController.swift; sourceTree = "<group>"; };
+		8F0EBF9E1F6529AB000BEEBC /* MyConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyConstant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,8 @@
 				8F0EBF821F64DAFA000BEEBC /* Info.plist */,
 				8F0EBF961F64FAB5000BEEBC /* Myclass.swift */,
 				8F0EBF981F651034000BEEBC /* TimerViewController.swift */,
+				8F0EBF9C1F652383000BEEBC /* CountViewController.swift */,
+				8F0EBF9E1F6529AB000BEEBC /* MyConstant.swift */,
 			);
 			path = FunnyNumber;
 			sourceTree = "<group>";
@@ -161,7 +167,9 @@
 				8F0EBF991F651034000BEEBC /* TimerViewController.swift in Sources */,
 				8F0EBF791F64DAFA000BEEBC /* ViewController.swift in Sources */,
 				8F0EBF971F64FAB5000BEEBC /* Myclass.swift in Sources */,
+				8F0EBF9F1F6529AB000BEEBC /* MyConstant.swift in Sources */,
 				8F0EBF771F64DAFA000BEEBC /* AppDelegate.swift in Sources */,
+				8F0EBF9D1F652383000BEEBC /* CountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

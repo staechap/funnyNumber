@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--CountViewController-->
         <scene sceneID="s2x-o0-r5l">
             <objects>
-                <viewController id="IwJ-N4-jHv" sceneMemberID="viewController">
+                <viewController title="CountViewController" id="IwJ-N4-jHv" customClass="CountViewController" customModule="FunnyNumber" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vMI-Ei-EhR"/>
                         <viewControllerLayoutGuide type="bottom" id="pFB-fA-2oS"/>
@@ -21,12 +21,64 @@
                     <view key="view" contentMode="scaleToFill" id="R2A-Xv-0bo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EOB-KQ-ALV">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Count" id="pWy-L7-bcJ">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="reply" id="97Z-Jb-poz">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="IJA-SI-vQY"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRY-4Y-Fw0">
+                                <rect key="frame" x="16" y="292" width="343" height="84"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GR9-Il-jUc">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem systemItem="play" id="PPT-Ny-aKf">
+                                        <connections>
+                                            <action selector="countButton:" destination="IwJ-N4-jHv" id="7TU-FL-rro"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="sS9-SD-vM9"/>
+                                    <barButtonItem systemItem="stop" id="i9N-df-ly1">
+                                        <connections>
+                                            <action selector="stopCount:" destination="IwJ-N4-jHv" id="mHl-YD-M68"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="JRY-4Y-Fw0" secondAttribute="trailing" id="1Fn-gh-H9M"/>
+                            <constraint firstItem="EOB-KQ-ALV" firstAttribute="leading" secondItem="R2A-Xv-0bo" secondAttribute="leading" id="GjF-1C-ed2"/>
+                            <constraint firstItem="JRY-4Y-Fw0" firstAttribute="leading" secondItem="R2A-Xv-0bo" secondAttribute="leadingMargin" id="Ogd-YQ-qbO"/>
+                            <constraint firstItem="EOB-KQ-ALV" firstAttribute="top" secondItem="vMI-Ei-EhR" secondAttribute="bottom" id="QQp-hC-jmO"/>
+                            <constraint firstItem="JRY-4Y-Fw0" firstAttribute="centerX" secondItem="R2A-Xv-0bo" secondAttribute="centerX" id="T0K-Qw-oHk"/>
+                            <constraint firstItem="JRY-4Y-Fw0" firstAttribute="centerY" secondItem="R2A-Xv-0bo" secondAttribute="centerY" id="WOc-Aq-Rgl"/>
+                            <constraint firstItem="JRY-4Y-Fw0" firstAttribute="trailing" secondItem="R2A-Xv-0bo" secondAttribute="trailingMargin" id="Yxg-6R-k1E"/>
+                            <constraint firstItem="JRY-4Y-Fw0" firstAttribute="leading" secondItem="R2A-Xv-0bo" secondAttribute="leadingMargin" id="eCG-Tl-4ZW"/>
+                            <constraint firstItem="EOB-KQ-ALV" firstAttribute="centerX" secondItem="R2A-Xv-0bo" secondAttribute="centerX" id="o1U-eg-6OB"/>
+                            <constraint firstAttribute="trailing" secondItem="EOB-KQ-ALV" secondAttribute="trailing" id="zA4-C1-Jjk"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textCount" destination="JRY-4Y-Fw0" id="WHs-Il-8MF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TFQ-47-fqO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-591" y="38"/>
+            <point key="canvasLocation" x="-586.39999999999998" y="42.728635682158924"/>
         </scene>
         <!--HomeController-->
         <scene sceneID="tne-QT-ifu">
@@ -64,7 +116,11 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fq7-Dt-3L7">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
-                                    <barButtonItem title="Item" systemItem="bookmarks" id="rcu-qf-sbn"/>
+                                    <barButtonItem title="Item" systemItem="bookmarks" id="rcu-qf-sbn">
+                                        <connections>
+                                            <segue destination="IwJ-N4-jHv" kind="show" id="i5n-P1-ezc"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Lwe-RU-5RJ"/>
                                     <barButtonItem title="Item" systemItem="search" id="zSl-rU-lQW"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="P9d-Fd-BDo"/>
@@ -177,11 +233,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C2c-en-aFI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="797.60000000000002" y="42.728635682158924"/>
+            <point key="canvasLocation" x="804" y="43"/>
         </scene>
     </scenes>
     <resources>
         <image name="alexander-mils-instagram-com-alexandermils-319981.jpg" width="3616" height="5424"/>
         <image name="ic_archive_2x.png" width="48" height="48"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="IJA-SI-vQY"/>
+    </inferredMetricsTieBreakers>
 </document>
