@@ -10,7 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    //
+    // Explicit 
+    var numberAInt: Int = 1
+    
     
     
     @IBOutlet weak var numberLabel: UILabel!
@@ -18,13 +20,23 @@ class ViewController: UIViewController {
     
     @IBAction func decButtom(_ sender: Any) {
         print("Click DEC")
+
     }
     
     @IBAction func incButtom(_ sender: Any) {
         print("Click INC")
+        numberAInt = addNumber(intNumber: numberAInt)
+        numberLabel.text = String(describing: numberAInt)
+        
     }
     
     
+    // Function Add Number
+    
+    func addNumber(intNumber: Int) -> Int {
+        let result = intNumber + 1
+        return result
+    }
     
     
     
