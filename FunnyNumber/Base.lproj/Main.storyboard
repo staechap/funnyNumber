@@ -11,20 +11,22 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="3FP-K7-jWd">
+        <scene sceneID="s2x-o0-r5l">
             <objects>
-                <viewController id="c4N-Cb-HB5" sceneMemberID="viewController">
-                    <label key="view" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bek-AX-BCQ">
+                <viewController id="IwJ-N4-jHv" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vMI-Ei-EhR"/>
+                        <viewControllerLayoutGuide type="bottom" id="pFB-fA-2oS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="R2A-Xv-0bo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6MD-9d-L6b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TFQ-47-fqO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-777" y="43"/>
+            <point key="canvasLocation" x="-591" y="38"/>
         </scene>
         <!--HomeController-->
         <scene sceneID="tne-QT-ifu">
@@ -132,7 +134,11 @@
                                                 <segue destination="BYZ-38-t0r" kind="show" id="lBu-tm-i0N"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="nqc-Of-ShX"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="nqc-Of-ShX">
+                                            <connections>
+                                                <action selector="playButtom:" destination="Red-JZ-yM9" id="thS-XL-Zka"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -146,7 +152,11 @@
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="FnI-i4-15T"/>
-                                    <barButtonItem title="Item" systemItem="stop" id="0Wc-mJ-lBl"/>
+                                    <barButtonItem title="Item" systemItem="stop" id="0Wc-mJ-lBl">
+                                        <connections>
+                                            <action selector="stopButtom:" destination="Red-JZ-yM9" id="98H-Ww-KOv"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -161,6 +171,9 @@
                             <constraint firstItem="8oJ-tK-yG0" firstAttribute="top" secondItem="ZYO-9i-osy" secondAttribute="bottom" id="yr8-zu-Hh8"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="numberLabel" destination="IHn-dq-86d" id="wcg-tZ-h31"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C2c-en-aFI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,7 +9,37 @@
 import UIKit
 
 class TimerViewController: UIViewController {
-
+    
+    //Expllicit
+    
+    var numberAInt: Int = 1
+    var objTimer = Timer()
+    
+    
+    
+    
+    @IBOutlet weak var numberLabel: UILabel!
+    
+    
+    @IBAction func playButtom(_ sender: Any) {
+            print("Click Play")
+        objTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(TimerViewController.playTime), userInfo: nil, repeats: true)
+    
+    }
+    
+    func playTime() -> Void {
+        numberAInt += 1  // java  numberAInt++
+        numberLabel.text = String(numberAInt)
+    }
+    
+    
+    @IBAction func stopButtom(_ sender: Any) {
+            print("Click Stop")
+            objTimer.invalidate()
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
