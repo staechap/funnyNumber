@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FunnyNumber" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alexander-mils-instagram-com-alexandermils-319981.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="hmf-2F-WnH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bzo-Eb-PKM">
+                                <rect key="frame" x="0.0" y="18" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Funny Number" id="sUl-2u-7oT">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="rewind" id="8C4-QO-vgH">
+                                            <connections>
+                                                <action selector="decButtom:" destination="BYZ-38-t0r" id="cvI-z5-5v8"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="fastForward" id="CWh-tf-ool">
+                                            <connections>
+                                                <action selector="incButtom:" destination="BYZ-38-t0r" id="4dA-GC-KSk"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fq7-Dt-3L7">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Item" systemItem="bookmarks" id="rcu-qf-sbn"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Lwe-RU-5RJ"/>
+                                    <barButtonItem title="Item" systemItem="search" id="zSl-rU-lQW"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="P9d-Fd-BDo"/>
+                                    <barButtonItem title="Item" systemItem="refresh" id="tCV-Tm-FTa"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Ymb-WN-Czw"/>
+                                    <barButtonItem image="ic_archive_2x.png" id="3OH-Lh-Mcn">
+                                        <color key="tintColor" red="1" green="0.19615320911948675" blue="0.24969930808987362" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TpV-YB-W6b">
+                                <rect key="frame" x="16" y="244" width="343" height="179.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="150"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Fq7-Dt-3L7" secondAttribute="trailing" id="0AD-7e-LVH"/>
+                            <constraint firstItem="hmf-2F-WnH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="13S-AF-6n0"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Fq7-Dt-3L7" secondAttribute="bottom" id="4Ss-7N-UD5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TpV-YB-W6b" secondAttribute="trailing" id="65T-jE-h6E"/>
+                            <constraint firstItem="TpV-YB-W6b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CMf-5H-C1O"/>
+                            <constraint firstItem="hmf-2F-WnH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DWS-4E-99u"/>
+                            <constraint firstAttribute="trailing" secondItem="hmf-2F-WnH" secondAttribute="trailing" id="UvM-zi-KxD"/>
+                            <constraint firstItem="TpV-YB-W6b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="e2L-Ao-88p"/>
+                            <constraint firstItem="TpV-YB-W6b" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ql6-Ct-WUJ"/>
+                            <constraint firstItem="Fq7-Dt-3L7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ssW-Rv-MLN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hmf-2F-WnH" secondAttribute="bottom" id="x48-Lm-OPf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="numberLabel" destination="TpV-YB-W6b" id="dta-Rs-zhk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93.599999999999994" y="42.728635682158924"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="alexander-mils-instagram-com-alexandermils-319981.jpg" width="3616" height="5424"/>
+        <image name="ic_archive_2x.png" width="48" height="48"/>
+    </resources>
+</document>
